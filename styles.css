@@ -13,12 +13,20 @@ body {
 .wrapper {
   width: 80rem;
   aspect-ratio: 1;
-  background-color: #bbb;
   border-radius: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.wrapper::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  border-radius: 50%;
+  box-shadow: -1rem  -1rem 2rem #444, 1rem 1rem 2rem #444, inset 10rem 0 5rem #000, inset -1rem 0 2rem #c9c3c3  ;
 }
 .earth {
   width: 100%;
@@ -31,10 +39,10 @@ body {
   animation-iteration-count:  infinite;
 }
 .day {
-  background-image: url(https://live.staticflickr.com/65535/52060675881_9eaf32ec10_k.jpg);
+  background-image: url(https://github.com/Mr-Robot-101/Animated-Earth-Day-Night/blob/master/earth-day.jpg?raw=true);
 }
 .night {
-  background-image: url(https://live.staticflickr.com/65535/52060906194_47819460d5_b.jpg);
+  background-image: url(https://github.com/Mr-Robot-101/Animated-Earth-Day-Night/blob/master/earth-night.jpg?raw=true);
   clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
 }
 @keyframes earth-anim{
